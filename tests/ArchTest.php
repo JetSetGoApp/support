@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 arch()
-    ->expect('VendorName\Skeleton')
+    ->expect('JetSetGo\Support')
     ->toHaveMethodsDocumented()
     ->toHavePropertiesDocumented()
     ->toUseStrictTypes()
@@ -17,108 +17,108 @@ arch()
         'ray',
     ]);
 
-arch()->expect('VendorName\Skeleton\Traits')->toBeTraits();
-arch()->expect('VendorName\Skeleton\Concerns')->toBeTraits();
+arch()->expect('JetSetGo\Support\Traits')->toBeTraits();
+arch()->expect('JetSetGo\Support\Concerns')->toBeTraits();
 
-arch()->expect('VendorName\Skeleton')
+arch()->expect('JetSetGo\Support')
     ->not->toBeEnums()
-    ->ignoring('VendorName\Skeleton\Enums')
+    ->ignoring('JetSetGo\Support\Enums')
     ->not->toImplement(Throwable::class)
-    ->ignoring('VendorName\Skeleton\Exceptions')
+    ->ignoring('JetSetGo\Support\Exceptions')
     ->not->toExtend('Illuminate\Database\Eloquent\Model')
-    ->ignoring('VendorName\Skeleton\Models')
+    ->ignoring('JetSetGo\Support\Models')
     ->not->toExtend('Illuminate\Foundation\Http\FormRequest')
-    ->ignoring('VendorName\Skeleton\Http\Requests')
+    ->ignoring('JetSetGo\Support\Http\Requests')
     ->not->toExtend('Illuminate\Console\Command')
-    ->ignoring('VendorName\Skeleton\Console\Commands')
+    ->ignoring('JetSetGo\Support\Console\Commands')
     ->not->toExtend('Illuminate\Mail\Mailable')
-    ->ignoring('VendorName\Skeleton\Mail')
+    ->ignoring('JetSetGo\Support\Mail')
     ->not->toExtend('Illuminate\Notifications\Notification')
-    ->ignoring('VendorName\Skeleton\Notifications')
+    ->ignoring('JetSetGo\Support\Notifications')
     ->not->toHaveSuffix('Controller')
-    ->ignoring('VendorName\Skeleton\Http\Controllers');
+    ->ignoring('JetSetGo\Support\Http\Controllers');
 
-arch()->expect('VendorName\Skeleton\Enums')
+arch()->expect('JetSetGo\Support\Enums')
     ->toBeEnums()
-    ->ignoring('VendorName\Skeleton\Enums\Concerns');
+    ->ignoring('JetSetGo\Support\Enums\Concerns');
 
-arch()->expect('VendorName\Skeleton\Features')
+arch()->expect('JetSetGo\Support\Features')
     ->toBeClasses()
-    ->ignoring('VendorName\Skeleton\Features\Concerns');
+    ->ignoring('JetSetGo\Support\Features\Concerns');
 
-arch()->expect('VendorName\Skeleton\Features')
+arch()->expect('JetSetGo\Support\Features')
     ->toHaveMethod('resolve');
 
-arch()->expect('VendorName\Skeleton\Exceptions')
+arch()->expect('JetSetGo\Support\Exceptions')
     ->classes()
     ->toImplement('Throwable');
 
-arch()->expect('VendorName\Skeleton\Http\Middleware')
+arch()->expect('JetSetGo\Support\Http\Middleware')
     ->classes()
     ->toHaveMethod('handle');
 
-arch()->expect('VendorName\Skeleton\Models')
+arch()->expect('JetSetGo\Support\Models')
     ->classes()
     ->toExtend('Illuminate\Database\Eloquent\Model')
-    ->ignoring('VendorName\Skeleton\Models\Scopes');
+    ->ignoring('JetSetGo\Support\Models\Scopes');
 
-arch()->expect('VendorName\Skeleton\Http\Requests')
+arch()->expect('JetSetGo\Support\Http\Requests')
     ->classes()
     ->toHaveSuffix('Request');
 
-arch()->expect('VendorName\Skeleton\Http\Requests')
+arch()->expect('JetSetGo\Support\Http\Requests')
     ->toExtend('Illuminate\Foundation\Http\FormRequest');
 
-arch()->expect('VendorName\Skeleton\Http\Requests')
+arch()->expect('JetSetGo\Support\Http\Requests')
     ->toHaveMethod('rules');
 
-arch()->expect('VendorName\Skeleton\Console\Commands')
+arch()->expect('JetSetGo\Support\Console\Commands')
     ->classes()
     ->toHaveSuffix('Command');
 
-arch()->expect('VendorName\Skeleton\Console\Commands')
+arch()->expect('JetSetGo\Support\Console\Commands')
     ->classes()
     ->toExtend('Illuminate\Console\Command');
 
-arch()->expect('VendorName\Skeleton\Console\Commands')
+arch()->expect('JetSetGo\Support\Console\Commands')
     ->classes()
     ->toHaveMethod('handle');
 
-arch()->expect('VendorName\Skeleton\Mail')
+arch()->expect('JetSetGo\Support\Mail')
     ->classes()
     ->toExtend('Illuminate\Mail\Mailable');
 
-arch()->expect('VendorName\Skeleton\Mail')
+arch()->expect('JetSetGo\Support\Mail')
     ->classes()
     ->toImplement('Illuminate\Contracts\Queue\ShouldQueue');
 
-arch()->expect('VendorName\Skeleton\Jobs')
+arch()->expect('JetSetGo\Support\Jobs')
     ->classes()
     ->toImplement('Illuminate\Contracts\Queue\ShouldQueue');
 
-arch()->expect('VendorName\Skeleton\Jobs')
+arch()->expect('JetSetGo\Support\Jobs')
     ->classes()
     ->toHaveMethod('handle');
 
-arch()->expect('VendorName\Skeleton\Listeners')
+arch()->expect('JetSetGo\Support\Listeners')
     ->toHaveMethod('handle');
 
-arch()->expect('VendorName\Skeleton\Notifications')
+arch()->expect('JetSetGo\Support\Notifications')
     ->toExtend('Illuminate\Notifications\Notification');
 
-arch()->expect('VendorName\Skeleton\Providers')
+arch()->expect('JetSetGo\Support\Providers')
     ->toHaveSuffix('ServiceProvider');
 
-arch()->expect('VendorName\Skeleton\Http\Controllers')
+arch()->expect('JetSetGo\Support\Http\Controllers')
     ->classes()
     ->toHaveSuffix('Controller');
 
-arch()->expect('VendorName\Skeleton\Http')
-    ->toOnlyBeUsedIn('VendorName\Skeleton\Http');
+arch()->expect('JetSetGo\Support\Http')
+    ->toOnlyBeUsedIn('JetSetGo\Support\Http');
 
-arch()->expect('VendorName\Skeleton\Http\Controllers')
+arch()->expect('JetSetGo\Support\Http\Controllers')
     ->not->toHavePublicMethodsBesides(['__construct', '__invoke', 'index', 'show', 'create', 'store', 'edit', 'update', 'destroy', 'middleware']);
 
-arch()->expect('VendorName\Skeleton\Policies')
+arch()->expect('JetSetGo\Support\Policies')
     ->classes()
     ->toHaveSuffix('Policy');

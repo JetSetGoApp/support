@@ -1,19 +1,19 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "jetsetgoapp/support",
+    "description": "Support package for JetSetGo application",
     "keywords": [
         "hyper-sites",
         "laravel",
-        ":package_slug",
+        "support",
         "module",
         "konekt",
         "concord"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/jetsetgoapp/support",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com"
+            "name": "JetSetGo Team",
+            "email": "developers@jetsetgo.com"
         }
     ],
     "require": {
@@ -32,18 +32,17 @@
         "pestphp/pest-plugin-laravel": "^3.0",
         "phpstan/extension-installer": "^1.3",
         "phpstan/phpstan-deprecation-rules": "^1.1",
-        "phpstan/phpstan-phpunit": "^1.3",
-        "spatie/laravel-ray": "^1.35"
+        "phpstan/phpstan-phpunit": "^1.3"
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src/",
-            "VendorName\\Skeleton\\Database\\Factories\\": "resources/database/factories/"
+            "JetSetGo\\Support\\": "src/",
+            "JetSetGo\\Support\\Database\\Factories\\": "resources/database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests/",
+            "JetSetGo\\Support\\Tests\\": "tests/",
             "Workbench\\App\\": "workbench/app/"
         }
     },
@@ -65,10 +64,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "JetSetGo\\Support\\SupportServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "Support": "JetSetGo\\Support\\Facades\\Support"
             }
         }
     },

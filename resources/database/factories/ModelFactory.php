@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Hyper\ModuleSkeleton\Database\Factories;
+namespace Hyper\ModuleSupport\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
