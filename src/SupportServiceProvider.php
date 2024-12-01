@@ -6,7 +6,7 @@ namespace JetSetGo\Support;
 
 use Konekt\Concord\BaseModuleServiceProvider;
 
-class SupportServiceProvider extends BaseModuleServiceProvider
+final class SupportServiceProvider extends BaseModuleServiceProvider
 {
     //
 }
