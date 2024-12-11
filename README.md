@@ -7,5 +7,5 @@
 You can install the package via git submodules:
 
 ```bash
-git submodules add git@github.com:jetsetgoapp/support app_models/support
+composer require jetsetgoapp/support
 ```
