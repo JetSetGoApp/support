@@ -2,7 +2,7 @@
     "name": "jetsetgoapp/support",
     "description": "Support package for JetSetGo application",
     "keywords": [
-        "hyper-sites",
+        "jetsetgo",
         "laravel",
         "support",
         "module",
@@ -17,52 +17,30 @@
         }
     ],
     "require": {
-        "php": "^8.2",
-        "konekt/concord": "^1.15",
-        "illuminate/contracts": "^11.0"
+        "konekt/concord": "^1.15"
     },
     "require-dev": {
-        "laravel/pint": "^1.14",
-        "tightenco/duster": "^3.0",
-        "nunomaduro/collision": "^8.1.1",
-        "larastan/larastan": "^2.0",
-        "orchestra/testbench": "^9.0.0",
-        "pestphp/pest": "^3.0",
-        "pestphp/pest-plugin-arch": "^3.0",
-        "pestphp/pest-plugin-laravel": "^3.0"
+        "tightenco/duster": "^3.0"
     },
     "autoload": {
         "psr-4": {
-            "JetSetGo\\Support\\": "src/",
-            "JetSetGo\\Support\\Database\\Factories\\": "resources/database/factories/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "JetSetGo\\Support\\Tests\\": "tests/",
-            "Workbench\\App\\": "workbench/app/"
+            "JetSetGo\\Support\\": "src/"
         }
     },
     "scripts": {
-        "post-autoload-dump": "@composer run prepare",
-        "prepare": "@php vendor/bin/testbench package:discover --ansi",
-        "analyse": "vendor/bin/phpstan analyse",
-        "test": "./vendor/bin/pest --ci --stop-on-failure --parallel",
-        "test-coverage": "vendor/bin/pest --coverage",
-        "format": "vendor/bin/pint"
+        "format": "vendor/bin/duster fix"
     },
     "config": {
-        "sort-packages": true,
-        "allow-plugins": {
-            "pestphp/pest-plugin": true
-        }
+        "sort-packages": true
     },
     "extra": {
         "laravel": {
             "providers": [
                 "JetSetGo\\Support\\SupportServiceProvider"
             ],
-            "aliases": {}
+            "aliases": {
+                "Supplier": "JetSetGo\\Support\\Facades\\Supplier"
+            }
         }
     },
     "minimum-stability": "dev",
