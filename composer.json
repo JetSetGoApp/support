@@ -35,9 +35,6 @@
     },
     "extra": {
         "laravel": {
-            "providers": [
-                "JetSetGo\\Support\\SupportServiceProvider"
-            ],
             "aliases": {
                 "Supplier": "JetSetGo\\Support\\Facades\\Supplier"
             }
