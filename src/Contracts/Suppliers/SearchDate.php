@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace JetSetGo\Support\Contracts\Suppliers;
 
 use Illuminate\Support\Carbon;
